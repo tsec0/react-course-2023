@@ -1,6 +1,9 @@
-import { create } from "../../services/gameService";
+import { useNavigate } from "react-router-dom";
+import * as gameService from "../../services/gameService"; // { all functions imported as an object }
 
 export default function Create(){
+    // for redirection
+    const navigate = useNavigate();
 
     // shall wait for create request
     const createGameSubmitHandler = async (e) => {
@@ -16,9 +19,16 @@ export default function Create(){
          */
         const gameData = Object.fromEntries(new FormData(e.currentTarget));
 
-        // receiving the response after waiting the create process
-        const response = await create(gameData);
-        console.log(response);
+        try {
+            // receiving the response after waiting the create process
+            await gameService.create(gameData);
+        
+            // navigating to games catalog after completing the create service for game
+            navigate('/catalog');
+        } catch(err) {
+            // error notification
+            console.log(err);
+        }
     }
 
 

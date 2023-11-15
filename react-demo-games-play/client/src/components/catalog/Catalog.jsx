@@ -1,4 +1,17 @@
+import * as gameService from '../../services/gameService';
+import { useEffect, useState } from "react"
+
 export default function Catalog(){
+    const [games, setGames] = useState([]);
+
+
+    useEffect(() => {
+        gameService.getAll()
+        .then(result => setGames(result));
+    }, []);
+
+    console.log(games);
+
     return (
         <section id="catalog-page">
             <h1>All Games</h1>
