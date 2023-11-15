@@ -30,5 +30,13 @@
         "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Ultimate_MK3.png/220px-Ultimate_MK3.png",
         "summary": "MK3",
         "_id": "18bfdb21-333b-42bd-a32c-c114263f2569"
+    },
+    "6cb713ac-af28-4b58-9eec-6b33c47c6741": {
+        "title": "Legendary",
+        "category": "Famous",
+        "maxLevel": "22",
+        "imageUrl": "NO IMAGE",
+        "summary": "ASdsafsadfaewsfwe",
+        "_id": "6cb713ac-af28-4b58-9eec-6b33c47c6741"
     }
 }
