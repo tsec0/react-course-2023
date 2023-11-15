@@ -1,4 +1,21 @@
 export default function Create(){
+
+    const createGameSubmitHandler = (e) => {
+        e.preventDefault();
+
+        /* taking from form
+            title,
+            category,
+            maxLevel,
+            imageUrl,
+            summery
+            as Object
+         */
+        const gameData = Object.fromEntries(new FormData(e.currentTarget));
+
+    }
+
+
     return (
         <section id="create-page" className="auth">
             <form id="create">
