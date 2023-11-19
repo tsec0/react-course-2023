@@ -1,5 +1,8 @@
 /* eslint-disable react/prop-types */
+import { Link } from "react-router-dom";
+
 export default function CatalogItem ({
+        _id,
         title,
         category,
         imageUrl,
@@ -10,7 +13,7 @@ export default function CatalogItem ({
                 <img src={imageUrl} />
                 <h6>{category}</h6>
                 <h2>{title}</h2>
-                <a href="#" className="details-button">Details</a>
+                <Link to={`/catalog/${_id}`} className="details-button">Details</Link>
             </div>
         </div>
     )

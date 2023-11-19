@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-key */
 import * as gameService from '../../services/gameService';
+
 import { useEffect, useState } from "react";
 import CatalogItem from './catalogItem/CatalogItem';
 
