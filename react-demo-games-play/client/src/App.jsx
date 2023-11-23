@@ -1,4 +1,13 @@
-import { Routes, Route } from 'react-router-dom';
+// vendors
+import { useState } from 'react';
+import { Routes, Route, useNavigate } from 'react-router-dom';
+
+// utils, context
+import * as authService from './services/authServices';
+import AuthContext from './context/authContext';
+import Path from './paths';
+
+// components
 import Header from "./components/header/Header";
 import Home from "./components/home/Home";
 import Catalog from './components/catalog/Catalog';
@@ -6,15 +15,26 @@ import Create from './components/create/Create';
 import Login from './components/login/Login';
 import Register from './components/register/Register';
 import Details from './components/details/Details';
-// import { useState } from 'react';
-import AuthContext from './context/authContext';
 
 function App() {
-  // not plesent here
-  // const [auth, setAuth] = useState({});
+  const navigate = useNavigate();
 
-  const loginSubmitHandler = (values) => {
-    console.log(values)
+  // not plesent here
+  const [auth, setAuth] = useState({});
+
+  // accessToken
+  // email
+  // username
+  // _id
+
+  const loginSubmitHandler = async (values) => {
+    // console.log(values); // email , password
+    const result = await authService.login(values.email, values.password);
+    
+    // bezotgovorno (ama samo malko) zaradi server return-a
+    setAuth(result);
+
+    navigate(Path.Home);
   }
 
   return (
