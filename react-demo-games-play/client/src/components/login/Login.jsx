@@ -1,4 +1,6 @@
 /* eslint-disable react/prop-types */
+import { useContext } from "react";
+import AuthContext from "../../context/authContext";
 import useForm from "../../hooks/useForm";
 
 const LoginFormKeys = {
@@ -6,9 +8,9 @@ const LoginFormKeys = {
     Password: 'password'
 }
 
-export default function Login({
-    loginSubmitHandler,
-}){
+export default function Login(){
+    // received through the context
+    const { loginSubmitHandler } = useContext(AuthContext);
 
     // onChange = changeHandler ; onSubmit = submitHandler
     // values is object
