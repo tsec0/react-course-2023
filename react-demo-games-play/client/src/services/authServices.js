@@ -9,4 +9,12 @@ export const login = async (email, password) => {
     });
 
     return result;
-}
+};
+
+// async not needed here we just return the promise - registerSubmitHandler is awaited
+export const register = (email, password) => request.post(
+    `${baseUrl}/register`,
+    {
+        email,
+        password,
+    });
