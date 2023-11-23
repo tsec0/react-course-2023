@@ -5,7 +5,8 @@ const baseUrl = 'http://localhost:3030/users';
 export const login = async (email, password) => {
     const result = await request.post(`${baseUrl}/login`, {
         email,
-        password
+        password,
+        // username - the server will write and other info
     });
 
     return result;
@@ -18,3 +19,7 @@ export const register = (email, password) => request.post(
         email,
         password,
     });
+
+
+// logout
+export const logout = () => request.get(`${baseUrl}/logout`);

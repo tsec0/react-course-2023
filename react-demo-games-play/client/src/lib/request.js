@@ -1,6 +1,5 @@
 // should add error handling
 
-
 const buildOptions = (data) => {
     const options = {};
 
@@ -8,6 +7,15 @@ const buildOptions = (data) => {
         options.body = JSON.stringify(data);
         options.headers = {
             'content-type': 'application/json'
+        };
+    }
+
+    const token = localStorage.getItem('accsessToken');
+
+    if (token){
+        options.headers = {
+            ...options.headers,
+            'X-Authorization': token,
         };
     }
 
@@ -21,7 +29,16 @@ const request = async (method, url, data) => {
         method,
     });
 
+    if(response.status === 204){
+        return {};
+    }
+
     const result = await response.json();
+
+    // not a bad recomendation
+    if(!response.ok){
+        throw result;
+    }
 
     return result;
 };
