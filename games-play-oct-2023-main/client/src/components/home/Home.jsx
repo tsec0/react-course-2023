@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import withAuth from "../../HOC/withAuth";
 
 function Home({
