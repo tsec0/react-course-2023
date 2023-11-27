@@ -1,0 +1,25 @@
+header, footer {
+    padding: 10px;
+}
+
+main {
+    height: 1000px;
+}
+
+header {
+    background-color: #FFFFFF;
+}
+
+footer {
+    background-color: #696F76;
+    height: 400px;
+}
+
+nav, aside {
+    width: 300px;
+    background-color: #D5FFD2;
+}
+
+a {
+    text-decoration: none;
+}

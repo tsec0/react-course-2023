@@ -1,0 +1,30 @@
+main {
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+}
+
+/* left navigation */
+main nav ul {
+    text-align: center;
+}
+
+main nav ul li:nth-child(1) {
+    border-top: none;
+}
+
+main nav ul li, main nav ul li:last-child {
+    border-bottom: 1px solid #000;
+}
+
+main nav ul li {
+    padding: 0px;
+    padding: 14px;
+}
+
+main nav ul li a {
+    color: #296125;
+    font-size: 30px;
+}
+
+/* main article */
+

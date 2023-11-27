@@ -25,5 +25,3 @@ export const edit = async (gameId, gameData) => {
 
     return result;
 };
-
-
