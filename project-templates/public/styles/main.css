@@ -27,4 +27,41 @@ main nav ul li a {
 }
 
 /* main article */
+article {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    margin-left: 40px;
+}
 
+div.promotion-parts {
+    margin: 5px;
+    border: 1px solid #000;
+    height: 300px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+div.promotion-parts:hover {
+    border-color: rgb(177, 121, 0);
+    transition: 0.4s;
+    box-shadow: 0 5px 10px 0 rgb(177, 121, 0), 0 10px 20px 0 rgba(142, 142, 142, 0.19);
+}
+
+/* main aside */
+aside {
+    overflow-x: hidden;
+}
+
+aside ul li {
+    background-image: url('../logo/R.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 85px;
+    border: none;
+    margin-bottom: 1px;
+}
+
+aside ul li a {
+    background-color: orange;
+}

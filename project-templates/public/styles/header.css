@@ -48,10 +48,16 @@ div.highly-rated li {
 }
 
 div.rated-item {
-    padding: 50px 50px 1px 50px;
+    padding: 5px 10px 1px 10px;
+    border-radius: 20px;
     background-color: #fff;
 }
 
 div.rated-item p {
     color: #000;
+}
+
+div.rated-item img {
+    width: 175px;
+    height: 150px;
 }
