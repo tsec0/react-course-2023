@@ -1,25 +1,23 @@
-header, footer {
-    padding: 10px;
+header {
+    background-color: #FFFFFF;
+}
+
+nav, aside {
+    width: 300px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
 }
 
 main {
     height: 1000px;
 }
 
-header {
-    background-color: #FFFFFF;
-}
-
 footer {
+    padding-top: 20px;
     background-color: #696F76;
     height: 400px;
 }
 
-nav, aside {
-    width: 300px;
-    background-color: #D5FFD2;
-}
-
-a {
-    text-decoration: none;
-}

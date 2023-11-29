@@ -1,0 +1,47 @@
+footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+div.contacts, div.faq, div.rate {
+    margin-top: 20px;
+}
+
+div.faq {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+div.faq a {
+    font-size: 18px;
+    color: #000;
+}
+
+div.faq a:hover {
+    transition: 300ms;
+    background-color: #fff;
+    color: #296125;
+    padding: 5px 10px;
+}
+
+div.rate p, span.star {
+    font-size: 30px; 
+}
+
+span.star {
+    border: none;
+    color: #fff;
+}
+
+span.star:hover {
+    transition: 100ms;
+    color: #ffb700;
+}
+
+textarea {
+    width: 450px;
+    height: 200px;
+    resize: none;
+    border-radius: 5px;
+}
