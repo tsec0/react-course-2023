@@ -1,0 +1,24 @@
+form.profile {
+    width: 1000px;
+    padding: 30px;
+    display: flex;
+}
+
+form.profile img {
+    border-radius: 5%;
+    padding: 100px 50px;
+    height: fit-content;
+    background-color: #fff;
+}
+
+form.profile legend {
+    text-align: center;
+}
+
+form.profile input[type="text"], form.profile input[type="email"] {
+    width: 200px;
+}
+
+form.profile #delivery {
+    width: 400px;
+}

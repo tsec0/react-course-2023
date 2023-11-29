@@ -70,7 +70,42 @@ form {
 
 legend {
     margin-bottom: 50px;
-    font-size: 50px;
+    font-size: 30px;
+}
+
+legend span {
+    font-size: 80px;
+}
+
+fieldset p a {
+    color: #760000;
+}
+
+fieldset p a:hover {
+    text-decoration: underline;
+}
+
+label {
+    font-size: 30px;
+}
+
+input {
+    border: none;
+    border-radius: 10px;
+    font-size: 30px;
+    width: 350px;
+    margin-top: 20px;
+}
+
+input[type="submit"] {
+    border: 2px solid #296125;
+    background-color: #296125;
+    color: #fff;
+    border-radius: 20px;
+}
+
+input[type="submit"]:hover {
+    border: 2px solid #033000;
 }
 
 /* main aside */
