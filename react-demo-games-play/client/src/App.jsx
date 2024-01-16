@@ -65,7 +65,7 @@ function App() {
     loginSubmitHandler,
     registerSubmitHandler,
     logoutHandler,
-    username: auth.username || auth.email, // emai or user
+    username: auth.username || auth.email, //
     email: auth.email,
     isAuthenticated: !!auth.email,
   };
