@@ -44,5 +44,3 @@ export const post = request.bind(null, 'POST');
 export const put = request.bind(null, 'PUT');
 export const remove = request.bind(null, 'DELETE');
 export const patch = request.bind(null, 'PATCH');
-
-

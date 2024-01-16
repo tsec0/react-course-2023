@@ -8,10 +8,11 @@ import Path from '../paths';
 const AuthContext = createContext();
 
 export const AuthProvider = ({
-    children,
-}) => {
+    children, }) => {
+
     const navigate = useNavigate();
     const [auth, setAuth] = usePersistedState('auth', {});
+
 
     const loginSubmitHandler = async (values) => {
         const result = await authService.login(values.email, values.password);
@@ -21,6 +22,7 @@ export const AuthProvider = ({
 
         navigate(Path.Home);
     };
+
 
     const registerSubmitHandler = async (values) => {
         const result = await authService.register(values.email, values.password);
@@ -32,10 +34,12 @@ export const AuthProvider = ({
         navigate(Path.Home);
     };
 
+
     const logoutHandler = () => {
         setAuth({});
         localStorage.removeItem('accessToken');
     };
+
 
     const values = {
         loginSubmitHandler,
@@ -46,6 +50,7 @@ export const AuthProvider = ({
         userId: auth._id,
         isAuthenticated: !!auth.accessToken,
     };
+    
 
     return (
         <AuthContext.Provider value={values}>

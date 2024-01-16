@@ -65,7 +65,7 @@ function App() {
     loginSubmitHandler,
     registerSubmitHandler,
     logoutHandler,
-    username: auth.username || auth.email,
+    username: auth.username || auth.email, // emai or user
     email: auth.email,
     isAuthenticated: !!auth.email,
   };
@@ -78,10 +78,10 @@ function App() {
 
         <Routes>
           <Route path={Path.Home} element={<Home />} />
-          <Route path="/catalog" element={<Catalog />} />
-          <Route path="/create" element={<Create />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          <Route path={Path.Catalog} element={<Catalog />} />
+          <Route path={Path.Create} element={<Create />} />
+          <Route path={Path.Login} element={<Login />} />
+          <Route path={Path.Register} element={<Register />} />
           <Route path="/catalog/:gameId" element={<Details />} />
           <Route path={Path.Logout} element={<Logout />} />
         </Routes>
