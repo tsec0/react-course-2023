@@ -15,10 +15,10 @@ export default function GameDetails() {
     const { email, userId } = useContext(AuthContext);
     
     const [game, setGame] = useState({});
+
+    const { gameId } = useParams();
     
     const [comments, dispatch] = useReducer(reducer, []);
-    
-    const { gameId } = useParams();
 
     useEffect(() => {
         gameService.getOne(gameId)
