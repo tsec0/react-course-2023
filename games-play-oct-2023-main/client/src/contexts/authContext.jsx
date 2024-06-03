@@ -7,8 +7,7 @@ import Path from '../paths';
 
 const AuthContext = createContext();
 
-export const AuthProvider = ({
-    children, }) => {
+export const AuthProvider = ({ children }) => {
 
     const navigate = useNavigate();
     const [auth, setAuth] = usePersistedState('auth', {});
